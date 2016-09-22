@@ -1,6 +1,8 @@
 package com.hu.api.service;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,17 @@ public class StudentServiceImpl implements IStudentService{
 
 	public Student selectByPrimaryKey(int i) {
 		Student st = this.studentDao.selectByPrimaryKey(i);
+		return st;
+	}
+
+	/**
+	 * @Title: selecAll
+	 * @Description: TODO 
+	 * @return
+	 * @see com.hu.api.service.Iservice.IStudentService#selecAll()
+	 */
+	public List<Student> selecAll() {
+		List<Student> st = this.studentDao.selectAll();
 		return st;
 	}
 

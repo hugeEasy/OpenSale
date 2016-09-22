@@ -1,6 +1,8 @@
 package com.hu.api.controller;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,14 +16,14 @@ import com.hu.api.service.Iservice.IStudentService;
 
 
 @Controller
-@RequestMapping("/student")
+@RequestMapping("/hello")
 public class StudentController {
 
 	@Autowired
 	private IStudentService studentService;
 	
 	@ResponseBody
-	@RequestMapping(value="/getstudent.do", method = RequestMethod.GET)
+	@RequestMapping(value="/getStudent.do", method = RequestMethod.GET)
 	public JSON getStudent(){
 		Student ss = this.studentService.selectByPrimaryKey(1);
 		System.out.println(ss.getEmail());
@@ -36,11 +38,8 @@ public class StudentController {
 	
 	@ResponseBody
 	@RequestMapping(value="/getInfo.do", method = RequestMethod.GET)
-	public Student getInfo(){
-		Student ss = this.studentService.selectByPrimaryKey(1);
-		int i = 0;
-		
-		System.out.println(i++);
+	public List<Student> getInfo(){
+		List ss =  this.studentService.selecAll();
 		return ss;
 		
 	}
