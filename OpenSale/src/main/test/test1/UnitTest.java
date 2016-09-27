@@ -22,10 +22,10 @@ import org.junit.Test;
 public class UnitTest {
 
 	@Test
-	public void setUp() throws Exception
-    {
+	public void setUp() throws Exception {
         System.out.println("set up");
         // 生成成员变量的实例
         System.out.println("111111111111111111");
     }
+	
 }

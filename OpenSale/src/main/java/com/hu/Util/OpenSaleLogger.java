@@ -32,7 +32,7 @@ public class OpenSaleLogger {
 
     public static OpenSaleLogger getOpenSaleLogger() {
         if (openSaleLogger == null) {
-        	openSaleLogger = new OpenSaleLogger("resources/log4j.properties");///OpenSale/src/main/resources/log4j.properties
+        	openSaleLogger = new OpenSaleLogger("classes/log4j.properties");///OpenSale/src/main/resources/log4j.properties
         }
         return openSaleLogger;
     }

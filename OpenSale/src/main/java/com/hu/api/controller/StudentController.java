@@ -25,6 +25,7 @@ public class StudentController {
 	@ResponseBody
 	@RequestMapping(value="/getStudent.do", method = RequestMethod.GET)
 	public JSON getStudent(){
+		
 		Student ss = this.studentService.selectByPrimaryKey(1);
 		System.out.println(ss.getEmail());
 		System.out.println(ss.getName());
@@ -40,6 +41,7 @@ public class StudentController {
 	@RequestMapping(value="/getInfo.do", method = RequestMethod.GET)
 	public List<Student> getInfo(){
 		List ss =  this.studentService.selecAll();
+		
 		return ss;
 		
 	}
